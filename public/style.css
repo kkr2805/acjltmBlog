@@ -1,50 +1,123 @@
-* {
-    box-sizing: border-box;
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #21222A;
+    height: 100%;
 }
 
-body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #282D35;
+#root {
+    height: 100%;
+} 
+
+a:link {
+    color : pink;
+  }
+  a:visited {
+    color : white;
+  }
+  a:hover {
+    color : red;
+  }
+  a:active {
+    color : green
+  }
+
+
+.wrapper {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto auto 40px;
+    gap: 0px;
 }
 
-nav {
+.main-head {
+    grid-column: 1 / 12 span;
+    grid-row : 1 ;
     display: flex;
     align-items: center;
     background-color: #21222A;
-    height: 90px;
-    padding: 30px 25px;
+    border: 2px solid #aaa;
 }
 
-.nav--logo_text, .nav--title {
-    margin: 0;
+.main-nav {
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 2 ;
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    background-color: #21222A;
+    color: white;
+    font-size: 15px;
+    border: 2px solid #aaa;
 }
 
-.nav--logo_text {
+.content {
+    grid-column: 5 / span 4;
+    grid-row: 2 / span 2 ;
+    padding:57px 27px;
+    color: white;
+    background-color: #21222A;
+    border: 2px solid #aaa;
+}
+
+.side {
+    grid-column: 9 / span 2;
+    grid-row: 2 / span 1 ;
+    background-color: #21222A;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border: 2px solid #aaa;
+}
+
+.ad {
+    grid-column: 9 / span 2;
+    grid-row: 3 / span 1 ;
+    background-color: #21222A;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border: 2px solid #aaa;
+}
+
+.main-footer {
+    grid-column: 1 / span 12;
+    grid-row: 4;
+    background-color: #21222A;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    border: 2px solid #aaa;
+}
+
+.head--icon {
+    height: 40px;
+    margin: 10px;
+}
+
+.head--logo_text {
     margin-right: auto;
     color: #61DAFB;
     font-weight: 700;
+    font-size: 20 px;
 }
 
-.nav--title {
+.head--title {
     color: #DEEBF8;
     font-weight: 600;
-    font-size: 15px
+    font-size: 15px;
+    margin: 30px;
 }
 
-.nav--icon {
-    height: 30px;
-    margin-right: 7px;
-}
-
-main {
-    padding:57px 27px;
-    color: white;
+.main-nav-item{
+    text-align: center;
+    margin-top: 40px;
 }
 
 .main--title {
     margin:0;
-    font-size: 39px;
+    font-size: 30px;
     letter-spacing: -0.05em;
 }
 

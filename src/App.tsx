@@ -1,12 +1,21 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Main from './components/Main';
+import Header from './components/Header';
+import Nav from './components/Nav';
+import Article from './components/Article';
+import Aside from './components/Aside';
+import Advertise from './components/Advertise';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
-    <div className='container'>
-      <Navbar />
-      <Main />
+    <div className='wrapper'>
+      <Header />
+      <Nav />
+      <Article />
+      <Aside />
+      <Advertise />
+      <Footer />
     </div>
   );
 }
