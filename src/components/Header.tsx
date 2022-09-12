@@ -3,9 +3,19 @@ import React from "react"
 export default function Header() {
     return (
         <header className="main-head">
-            <h3 className="head--logo_text">Ajcltm Blog</h3>
-            <h4 className="head--title">할아버지 자서전</h4>
-            <img className="head--icon" src='/images/icon.jpg'/>
+            <div className="main-head-wraper">
+                <button className="main-head-title">Ajcltm Blog</button>
+                <div className="dropdown">
+                    <button className="link"> about </button>
+                    <div className="dropdown-menu">
+                        Dropdown Content
+                    </div>
+                </div>
+                <button className="main-head-login">Login</button>
+            </div>
+            <div className="head-profile-wraper">
+                <img className="head-profile" src='/images/icon.jpg'/>
+            </div>
         </header>
 
     )
