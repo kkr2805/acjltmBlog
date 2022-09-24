@@ -5,64 +5,168 @@
 }
 
 html, body {
+    height: 100%;
+    width: 100%;
     margin: 0px;
     padding: 0px;
     background-color: #2d2d2d;
-    height: 100%;
-    /* overflow: hidden; */
-    font-size: 11px;
+    font-size: 12px;
 }
-
 
 #root {
     height: 100%;
-} 
+}
 
-.wrapper {
+.app-grid {
     height: 100%;
     display: grid;
     grid-template-columns: auto repeat(10, 120px) auto;
-    grid-template-rows: 3rem auto auto 40px;
+    grid-template-rows: 4rem auto auto 40px;
     gap: 2px;
+    background: #2d2d2d;
+    z-index: 1;
+}
+
+.background-div {
+    grid-column: 1 / 12 span;
+    grid-row: 2 / 2 span;
+    background: url(../images/london.jpg) no-repeat center/cover;
+    /* background-color url background-repeat background-position/background-size */
+    transition: backdrop-filter .5s ease-in-ou;
+}
+
+.blur {
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(50px); 
+    height: 100%;
+    width: 100%;
+  }
+
+.screen-grid{
+    grid-column: 2 / 10 span;
+    grid-row : 2 / 2 span ;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 120px);
+    grid-template-rows: auto auto;
+    gap: 2px;
+    background: #2d2d2d;
 }
 
 .main-head {
     grid-column: 1 / 12 span;
     grid-row : 1 ;
+    display: grid;
+    grid-template-columns: auto repeat(10, 120px) auto;
     background-color: #171a27;
-    display: flex;
     box-shadow: 5px 5px 5px 0 rgba(0,0,0,.5);
     z-index: 1;
 }
 
-.main-head-wraper {
+.main-head-wraper{
+    grid-column: 2 / 10 span;
+    display: grid;
+    grid-template-columns: repeat(10, 120px);
+    align-items: center;
+    justify-content: center;
+}
+
+.main-head-title-wraper {
+    grid-column: 1 / 2 span;
     display: flex;
     height: 100%;
-    width: 100%;
-    align-items: center;
-    /* padding: .5rem; */
-    gap: 1rem;
 }
 
 .main-head-title {
+    display: flex;
+    align-items: center;
     color: #61DAFB;
     font-weight: bold;
     font-size: 1.5rem;
     background-color: inherit;
+    text-decoration: none;
     padding: 0px;
     height: 100%;
     margin-top: 0;
 }
 
+.main-head-title:hover {
+    transform: scale(1.05);
+    color: #61DAFB;
+    transition: .1s;
+}
+
+.main-menu-wraper {
+    grid-column: 3 / 6 span;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.main-menu-nav-wraper {
+    display: flex;
+    justify-content: space-around;
+    width: 70%; 
+    margin: 0px;
+    padding-right: auto;
+}
+
+.main-menu-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    flex-basis: auto;
+}
+
+.main-menu-nav:hover {
+    color:aqua;
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+.search-form {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:30%;   
+}
+
+.search-input {
+    width: 50%;
+    margin: 5px;
+    padding: 10px;
+    background-color: #2d2d2d;
+    color : white;
+    opacity: .5;
+    transition: width 0.1s ease-in-out;
+}
+
+.search-input:focus {
+    width: 100%;
+    background-color: white;
+    opacity: 1;
+    color: #2d2d2d;
+    font-weight: bold;
+}
+
 .dropdown {
+    
+    align-items: center;
     position: relative;
     margin-right: auto;
     height: 100%;
-
 }
 
 .link {
-    margin: 0px;
+    margin-left: 20px;
     padding: 0px;
     color: white;
     font-size: 1.25rem;
@@ -79,18 +183,21 @@ html, body {
 }
 
 .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
     color: white;
     font-size: 1.1rem;
-    left: 0;
+    left: 10px;
     top: calc(100%+.25rem);
-    background-color: inherit;
+    background-color: white;
     border-radius: .25rem;
     box-shadow: 5px 5px 5px 0 rgba(0,0,0,.5);
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
-    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    transition: opacity .2s ease-in-out, transform .2s ease-in-out;
     z-index: -1;
 }
 
@@ -100,28 +207,51 @@ html, body {
     pointer-events: auto;
 }
 
-.main-head-login {
+.login-label {
+    align-self: flex-start;
+    margin-left: 10px;
+    color: #171a27;
+    font-weight: bold;
+}
+
+.login-input {
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #2d2d2d;
+    opacity: .7 ;
+    color: #171a27;
+}
+
+.login-submit {
+    align-self: stretch;
+    background-color: #171a27;
     color: white;
     font-weight: bold;
-    font-size: 1.2rem;
-    background-color: inherit;
-    padding: 0px;
+    margin: 5px;
+    padding: 5px;
+    height: 2.2rem;
 }
 
 .head-profile-wraper {
+    grid-column: 9 / 2 span;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 0px;
     padding: 0px;
     height: 100%;
 }
 
 .head-profile {
-    height: 40px;
+    height: 45px;
     margin: 0px;
 }
 
 .main-nav {
-    grid-column: 2 / span 2;
-    grid-row: 2 / span 2 ;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2 ;
     display: flex;
     flex-direction: column;
     background-color: #252526;
@@ -149,8 +279,8 @@ html, body {
 }
 
 .content {
-    grid-column: 4 / span 6;
-    grid-row: 2 / span 2 ;
+    grid-column: 3 / span 6;
+    grid-row: 1 / span 2 ;
     overflow-y: auto;
     padding:57px 27px;
     color: white;
@@ -179,17 +309,18 @@ html, body {
 }
 
 .side {
-    grid-column: 10 / span 2;
-    grid-row: 2 / span 1 ;
+    grid-column: 9 / span 2;
+    grid-row: 1 / span 1 ;
     background-color: #252526;
     color: white;
     font-weight: 600;
     font-size: 20px;
+    padding: 10px;
 }
 
 .ad {
-    grid-column: 10 / span 2;
-    grid-row: 3 / span 1 ;
+    grid-column: 9 / span 2;
+    grid-row: 2 / span 1 ;
     background-color: #252526;
     color: white;
     font-weight: 600;

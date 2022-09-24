@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Article() {
+export default function Content() {
     return (
         <article className="content">
             <h1 className="main--title">The content title</h1>
