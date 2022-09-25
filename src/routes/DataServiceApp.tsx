@@ -8,15 +8,13 @@ import Advertise from '../components/Advertise';
 import Footer from '../components/Footer';
 
 
-function AboutApp() {
+function DataServiceApp() {
   return (
     <div className='screen-grid'>
       <Nav />
-      <Content gridColumn={6}/>
-      <Aside />
-      <Advertise />
+      <Content gridColumn={8}/>
     </div>
   );
 }
 
-export default AboutApp;
+export default DataServiceApp;

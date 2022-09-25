@@ -8,7 +8,7 @@ import Advertise from '../components/Advertise';
 import Footer from '../components/Footer';
 
 
-function AboutApp() {
+function AchieveApp() {
   return (
     <div className='screen-grid'>
       <Nav />
@@ -19,4 +19,4 @@ function AboutApp() {
   );
 }
 
-export default AboutApp;
+export default AchieveApp;

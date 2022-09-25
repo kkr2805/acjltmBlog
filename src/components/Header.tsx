@@ -11,9 +11,9 @@ export default function Header() {
                 <div className="main-menu-wraper">
                     <div className="main-menu-nav-wraper">
                         <Link className="main-menu-nav" to="/about">About</Link>
-                        <a className="main-menu-nav" href="">Web Business</a>
-                        <a className="main-menu-nav" href="">Data Service</a>
-                        <a className="main-menu-nav" href="">Achieve</a>
+                        <Link className="main-menu-nav" to="webBusiness">Web Business</Link>
+                        <Link className="main-menu-nav" to="dataService">Data Service</Link>
+                        <Link className="main-menu-nav" to="achieve">Achieve</Link>
                     </div>
                     <form className="search-form">
                         <input className="search-input" type='text' name='search' placeholder="Search.."/>
