@@ -20,8 +20,8 @@ export default function Header() {
                     </form>
                 </div>
                 <div className="head-profile-wraper">
-                    <div className="dropdown">
-                        <button className="link"> Login </button>
+                    <div className="dropdown" data-dropdown>
+                        <button className="link" data-dropdown-button> Login </button>
                         <form className="dropdown-menu">
                             <label className="login-label">ID</label>
                             <input type='text' placeholder="id" className="login-input" />

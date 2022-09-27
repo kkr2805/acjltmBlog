@@ -176,6 +176,7 @@ html, body {
     cursor: pointer;
 }
 
+.dropdown.active > .link,
 .link:hover {
     transform: scale(1.05);
     color: #61DAFB;
@@ -201,7 +202,7 @@ html, body {
     z-index: -1;
 }
 
-.dropdown > .link:focus + .dropdown-menu {
+.dropdown.active > .link + .dropdown-menu {
     opacity: 1;
     transform: translateY(0px);
     pointer-events: auto;
