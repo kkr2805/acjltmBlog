@@ -13,7 +13,7 @@ export default function Header() {
                         <Link className="main-menu-nav" to="/about">About</Link>
                         <Link className="main-menu-nav" to="webBusiness">Web Business</Link>
                         <Link className="main-menu-nav" to="dataService">Data Service</Link>
-                        <Link className="main-menu-nav" to="achieve">Achieve</Link>
+                        <Link className="main-menu-nav" to="archive">Achieve</Link>
                     </div>
                     <form className="search-form">
                         <input className="search-input" type='text' name='search' placeholder="Search.."/>

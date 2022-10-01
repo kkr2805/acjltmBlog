@@ -1,12 +1,13 @@
 import React from "react"
+import {Outlet, Link} from "react-router-dom"
 
 export default function Nav() {
     return (
         <nav className='main-nav'>
             <div className='main-nav-wraper'>
-                <a className='main-nav-item' href="">Nav 1</a>
-                <a className='main-nav-item' href="">Nav 2</a>
-                <a className='main-nav-item' href="">Nav 3</a>
+                <Link className='main-nav-item' to="about">Nav 1</Link>
+                <Link className='main-nav-item' to="">Nav 2</Link>
+                <Link className='main-nav-item' to="">Nav 3</Link>
             </div>
         </nav>
     )

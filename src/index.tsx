@@ -5,7 +5,8 @@ import App from './App';
 import AboutApp from './routes/AboutApp';
 import WebBusinessApp from './routes/WebBusinessApp';
 import DataServiceApp from './routes/DataServiceApp';
-import AchieveApp from './routes/AchieveApp';
+import ArchiveApp from './routes/ArchiveApp';
+import Content from './components/Content';
 
 // ReactDOM.render(<App/>, document.getElementById("root"))
 
@@ -14,10 +15,11 @@ ReactDOM.render(
     <Router>
         <Routes>
             <Route path="/" element={<App />}>
-                <Route path="about" element={<AboutApp />} />
-                <Route path="webBusiness" element={<WebBusinessApp />} />
-                <Route path="dataService" element={<DataServiceApp />} />
-                <Route path="achieve" element={<AchieveApp />} />
+                <Route path="/about" element={<AboutApp />} />
+                <Route path="/webBusiness" element={<WebBusinessApp />} />
+                <Route path="/dataService" element={<DataServiceApp />} />
+                <Route path="/archive" element={<ArchiveApp />} />
+                    <Route path="/archive/about" element={<Content gridColumn={6} />} />
             </Route>
         </Routes>
     </Router>,
