@@ -1,16 +1,18 @@
 import React from 'react';
 import Reset from 'styled-reset';
-import Nav from '../components/Nav';
+import {Nav_Archive} from '../components/Nav';
 import Content from '../components/Content';
 import Aside from '../components/Aside';
 import Advertise from '../components/Advertise';
-import {BrowserRouter as Router, Routes, Route, Outlet} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, Outlet, useParams} from "react-router-dom";
 
 function ArchiveApp() {
+  var params = useParams();
+  var articleId: number = Number(params.articleId);
   return (
     <div className='screen-grid'>
-      <Nav />
-      <Outlet />
+      <Nav_Archive />
+      <Content gridColumn={3} articleId={articleId} />
       <Aside />
       <Advertise />
     </div>
